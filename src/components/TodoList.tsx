@@ -5,7 +5,12 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useDeleteTodo } from "@/hooks/useDeleteTodo";
 import { Todo } from "@/networking/models";
 
-const ListItems = React.FC = ({ todos, isLoading }: { todos?: Todo[], isLoading: boolean }) => {
+interface ListItemsProps {
+  todos?: Todo[],
+  isLoading: boolean
+}
+
+const ListItems : React.FC<ListItemsProps> = ({ todos, isLoading }) => {
   const deleteTodo = useDeleteTodo()
   const queryClient = useQueryClient()
 
