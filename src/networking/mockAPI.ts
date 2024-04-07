@@ -5,7 +5,7 @@
 import { Todo } from "./models";
 
 
-const todos: Todo[] = Array.from({ length: 100 }, (_, i) => ({
+const todos: Todo[] = Array.from({ length: 5 }, (_, i) => ({
   id: i + 1,
   name: `Todo ${i + 1}`,
   description: `Description ${i + 1}`,
